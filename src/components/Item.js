@@ -23,9 +23,11 @@ const Item = (props) => {
                             {props.item.text}
                         </Typography>
                     </CardContent>
-                    <Button style={{margin: 16, marginTop: 0}} variant="contained" color="primary" href="#">
-                        Do Something
-                    </Button>
+                    <CardActions>
+                        <Button size="small" color="primary" href="#">
+                            Do Something
+                        </Button>
+                    </CardActions>
                 </Card>
             ) : null}
         </div>

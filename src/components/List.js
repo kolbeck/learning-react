@@ -10,10 +10,6 @@ class List extends Component {
         searchTerm: ''
     }
 
-    constructor() {
-        super();
-    }
-
     getItems = () => {
         this.setState((state) => {
             return {items: [{id: 1, text: state.searchTerm}]}
