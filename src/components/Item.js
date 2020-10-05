@@ -11,8 +11,8 @@ const Item = (props) => {
         <div>
             {props.item ? (
                 <Card>
-                    <CardMedia style={{ height: 0, paddingTop: '56.25%' }}
-                        image={'https://picsum.photos/1100/1100'}
+                    <CardMedia style={{ height: 300 }}
+                        image={'https://picsum.photos/300/300'}
                         title={'Random Image'}
                     />
                     <CardContent>
@@ -23,7 +23,7 @@ const Item = (props) => {
                             {props.item.text}
                         </Typography>
                     </CardContent>
-                    <Button variant="contained" color="primary" href="#">
+                    <Button style={{margin: 16, marginTop: 0}} variant="contained" color="primary" href="#">
                         Do Something
                     </Button>
                 </Card>
