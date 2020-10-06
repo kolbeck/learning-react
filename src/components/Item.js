@@ -12,15 +12,17 @@ const Item = (props) => {
             {props.item ? (
                 <Card>
                     <CardMedia style={{ height: 300 }}
-                        image={'https://picsum.photos/300/300'}
-                        title={'Random Image'}
+                        // image={'https://picsum.photos/300/300'}
+                        image={props.item.image_url}
+                        // title={'Random Image'}
+                        title={props.item.name}
                     />
                     <CardContent>
                         <Typography gutterBottom variant="h4" component="h2">
-                            Item Here
+                            {props.item.name}
                         </Typography>
                         <Typography component="p">
-                            {props.item.text}
+                            {props.item.description}
                         </Typography>
                     </CardContent>
                     <CardActions>
