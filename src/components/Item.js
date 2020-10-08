@@ -15,11 +15,11 @@ const Item = (props) => {
                         // image={'https://picsum.photos/300/300'}
                         image={props.item.image_url}
                         // title={'Random Image'}
-                        title={props.item.name}
+                        title={props.item.title}
                     />
                     <CardContent>
                         <Typography gutterBottom variant="h4" component="h2">
-                            {props.item.name}
+                            {props.item.title}
                         </Typography>
                         <Typography component="p">
                             {props.item.description}
