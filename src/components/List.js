@@ -17,14 +17,14 @@ class List extends Component {
 
     // TODO how to ensure results are coming back in the right order?
     getItems = (searchTerm) => {
-        var p = { page: 1, per_page: 3 };
+        var p = { offset: 0, limit: 3 };
         if (searchTerm)
-            p['beer_name'] = searchTerm;
+            p['q'] = searchTerm;
 
-        return axios.get(`https://api.punkapi.com/v2/beers`, {
+        return axios.get(`http://localhost:8080`, {
             params: p
         }).then(res => {
-            const items = res.data;
+            const items = res.data.items;
             console.log(items);
             this.setState({
                 items: items,
